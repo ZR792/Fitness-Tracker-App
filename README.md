@@ -14,6 +14,21 @@ A mobile fitness tracking app built with React Native and Expo as part of the MA
 - Mark exercises as completed
 - Daily motivational quotes
 
+## File Structure
+``
+FitnessTracker/
+├── App.js                        → Entry point & navigation
+├── context/
+│   └── ExerciseContext.js        → Global state for exercises
+├── screens/
+│   ├── HomeScreen.js             → Exercise list with search & filter
+│   ├── ExerciseDetailScreen.js   → Full detail view of an exercise
+│   ├── AddExerciseScreen.js      → Form to add a custom exercise
+│   └── QuotesScreen.js           → Motivational quotes screen
+├── assets/                       → Local exercise images
+└── app.json                      → Expo config
+``
+
 ## How to Run
 1. Clone the repository
 2. Run `npm install`
