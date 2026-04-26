@@ -15,7 +15,7 @@ A mobile fitness tracking app built with React Native and Expo as part of the MA
 - Daily motivational quotes
 
 ## File Structure
-``
+````
 FitnessTracker/
 ├── App.js                        → Entry point & navigation
 ├── context/
@@ -27,7 +27,7 @@ FitnessTracker/
 │   └── QuotesScreen.js           → Motivational quotes screen
 ├── assets/                       → Local exercise images
 └── app.json                      → Expo config
-``
+````
 
 ## How to Run
 1. Clone the repository
