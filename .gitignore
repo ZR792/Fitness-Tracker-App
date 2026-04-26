@@ -49,7 +49,6 @@ dist/
 web-build/
 
 # Build outputs
-*.apk
 *.aab
 *.ipa
 
