@@ -1,20 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { ExerciseProvider } from './context/ExerciseContext';
+
+import HomeScreen from './screens/HomeScreen';
+import ExerciseDetailScreen from './screens/ExerciseDetailScreen';
+import AddExerciseScreen from './screens/AddExerciseScreen';
+import QuotesScreen from './screens/QuotesScreen';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ExerciseProvider>
+      <NavigationContainer>
+        <StatusBar style="light" />
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            cardStyle: { backgroundColor: '#0A0A0F' },
+          }}
+        >
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="ExerciseDetail" component={ExerciseDetailScreen} />
+          <Stack.Screen name="AddExercise" component={AddExerciseScreen} />
+          <Stack.Screen name="Quotes" component={QuotesScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ExerciseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
